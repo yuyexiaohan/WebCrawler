@@ -4,9 +4,12 @@
 # File : client.py
 import requests
 
+
+phone = ''
+password = ''
 post_dict = {
-	"phone": '8613163253909',
-	'password': 'QAZwsx1992CT',
+	"phone": phone,
+	'password': password,
 	'oneMonth': 1
 }
 response = requests.post(

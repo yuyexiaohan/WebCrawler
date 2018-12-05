@@ -9,14 +9,16 @@ import re
 
 """爬虫示例：简单爬去一个网站的文件img,并保存到本地"""
 # 1.获取url的网络源代码
-response = requests.get(url='http://www.yawopc.com/pornl/96515.html')
+response = requests.get(url='https://movie.douban.com/')
 # 2.需要根据实际的编码方式进行编码，否则会出现乱码
-response.encoding = 'gbk'
+# response.encoding = 'gbk'
 # 3.实例化一个，将text以html文本分析器的方式进行解析
 soup = BeautifulSoup(response.text, features='html.parser')
+print(soup)
 # 4.查找解析后的文本中的内容,对html文件而言，都是可以将标签
 # 理解为对象，每个对象中又包含有多个对象。head/body -> div -> p ...
-target = soup.find('div',class_='content')
+target = soup.find('a', class_="item")
+print(target)
 # 5.缩小范围，find查找第一个数据，find_all查找文本所有的数据
 img_list = target.find_all('img')   # 查找对象内的所有的li标签的列表
 

@@ -21,7 +21,7 @@ form_data = {
     "utf8": "",
     "commit": "Sign in",
     "login": "yuyexiaohan",
-    'password': 'QAZwsx1992,.@'
+    'password': '***'
 }
 
 i2 = requests.post('https://github.com/session', data=form_data, cookies=c1)
@@ -59,7 +59,7 @@ form_data = {
     "utf8": "",
     "commit": "Sign in",
     "login": "yuyexiaohan",
-    'password': 'QAZwsx1992,.@'
+    'password': '***'
 }
 
 i2 = session.post('https://github.com/session', data=form_data)
